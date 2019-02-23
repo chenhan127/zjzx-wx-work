@@ -43,7 +43,11 @@ public class UserController {
 		resMap.put("status", "success");
 		resMap.put("wx_user", wx_user);
 		resMap.put("app_user", app_user);
-		return wx_user;
+		return resMap;
+	}
+	@RequestMapping("health")
+	public String health() {
+		return "health";
 	}
 
 }
